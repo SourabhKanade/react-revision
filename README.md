@@ -1,4 +1,3 @@
-# </> Food-Ordering-App
 ⭐ This is practice project created for the purpose for revision and to sharp my concepts by building projects.<br>
 
 ## 🤝 Contributions
