@@ -37,6 +37,46 @@ const FetchedData = () => {
       setisLoading(false);
   };
 
+// let options = {
+//     method: 'GET',
+//     headers: {
+//       'X-RapidAPI-Key': '57cf0be083msh8420b947729f662p115740jsn8e0e663b7e41',
+//       'X-RapidAPI-Host': 'current-news.p.rapidapi.com'
+//     }
+//   };
+
+//   async function fetchNewsHandler() {
+//     setisLoading(true);
+//     setError(null);
+
+//     try {
+//       const response = await fetch('https://current-news.p.rapidapi.com/news/health', options);
+
+//       if(!response.ok) {
+//         throw new Error ("Something went wrong!!");
+//       }
+
+//       const data = await response.json();
+// console.log(data);
+//         const transformedMovies = data.news.map((newsData) => {
+//           return {
+//             id: newsData.publishedAt,
+//             title: newsData.title,
+//             discription: newsData.description,
+//             releasedate: newsData.publishedAt
+//           };
+//         })
+//         setMovies(transformedMovies)
+      
+    
+//         } catch (error) {
+//           setError(error.message);
+//         }
+//           setisLoading(false);
+//       };
+  
+  // THE ABOVE GET REQUEST IS FOR FETCHING NEWS, API PROVIDED BY RAPIDAPI.COM
+
 
   return (
     <>
