@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial,
+    Tahoma,
+    Serif;
+  color: #263238;
+  background-color: #fcfdc4;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem
+    2rem;
+  background: #ded1bf;
+}
+
+nav a {
+  margin-right: 8rem;
+}
+
+button {
+  padding: 3px
+    15px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form_title {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.right {
+  right: 2rem;
+  margin-top: 7.79rem;
+  background-color: #ffffff;
+  height: 28rem;
+  width: 28rem;
+  border-color: #2b31b1;
+  border-top-style: inset;
+  border-bottom-style: inset;
+  border-right-style: inset;
+  border-left-style: inset;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  );
+  text-align: center;
+}
+
+.centered
+  img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.article_1 {
+  background-color: #ded1bf;
+  padding: 10px;
+  margin-top: 20px;
+  width: 58%;
+  border: solid
+    1px
+    #0b0808;
+  margin-left: 2rem;
+}
+
+.article_1
+  input {
+  margin-left: -7rem;
+  font-weight: 1px;
+  width: 28rem;
+}
+
+#city {
+  width: 17rem;
+}
+
+#phone {
+  width: 17rem;
+}
+
+.article_1
+  label {
+  width: 240px;
+  display: inline-block;
+}
+
+.article_2 {
+  background-color: #ded1bf;
+  padding: 10px;
+  margin-top: 20px;
+  width: 58%;
+  border: solid
+    1px
+    #0b0808;
+  margin-left: 2rem;
+}
+
+.checkboxes
+  input {
+  width: 24px;
+}
+
+.manage {
+  margin-left: 1.5rem;
+}
+
+.arrange {
+  margin-top: 10px;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.outline{
+  border-color: aqua;
+}
