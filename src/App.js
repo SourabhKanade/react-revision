@@ -1,10 +1,15 @@
-import React from 'react'
-import Login from './components/Login'
+import React from 'react';
+import {Route, Routes} from 'react-router-dom';
+import Customer from './components/Customer';
+import Login from './components/Login';
 
 function App() {
   return (
     <>
-     <Login />
+    <Routes>
+    <Route path="/" element={<Login />} />
+    <Route path="/customer" element={<Customer />} />
+    </Routes>
    </>
   )
 }

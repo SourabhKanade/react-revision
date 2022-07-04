@@ -1,4 +1,5 @@
 import ReCAPTCHA from 'react-google-recaptcha';
+import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import classes from './Login.module.css';
 import Button from "../ui/Button";
@@ -37,6 +38,7 @@ const Login = (props) => {
     event.preventDefault();
     setFormIsValid(inputisvalid);
     console.log("login clicked!");
+
   };
 
   function onChange(value) {
@@ -75,7 +77,9 @@ const Login = (props) => {
         </div>
        
         <div className={classes.actions}>
+        <Link to="/customer">
           <Button type="submit" disabled={!formIsValid}> Login </Button>
+          </Link>
         </div>
       </form>
     </div>
