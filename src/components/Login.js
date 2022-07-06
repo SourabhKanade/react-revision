@@ -20,14 +20,14 @@ const Login = (props) => {
     setFormIsValid(inputisvalid);
   };
 
+  const validateEmailHandler = () => {
+    setEmailIsValid(enteredEmail.includes('@'));
+  };
+
   const passwordChangeHandler = (event) => {
     setEnteredPassword(event.target.value);
     // console.log(event.target.value);
     setFormIsValid(inputisvalid);
-  };
-
-  const validateEmailHandler = () => {
-    setEmailIsValid(enteredEmail.includes('@'));
   };
 
   const validatePasswordHandler = () => {
@@ -38,7 +38,6 @@ const Login = (props) => {
     event.preventDefault();
     setFormIsValid(inputisvalid);
     console.log("login clicked!");
-
   };
 
   function onChange(value) {

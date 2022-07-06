@@ -6,29 +6,68 @@
 body {
   font-family: Arial, Tahoma, Serif;
   /* color: #263238; */
-  background-color: #adabab;
+  background-color: #efebeb;
 }
 
 .title {
   text-align: center;
 }
 
-
-
-/* TOOK FROM LOGIN.MODULE.CSS */
-.login {
-  width: 90%;
-  max-width: 35rem;
-  margin: 10rem auto;
-  padding: 90px 2rem 30px 2rem;
-  border: groove;
-  background-color: #0000000f;
+.corner {
+  display: flex;
+  justify-content: space-between;
 }
 
-.capcha{
-  text-align: -webkit-center;
-margin-bottom: 32px 35px 49px 21px;
-margin-bottom: 12px;
+.align {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lname {
+  margin-inline-start: auto;
+  margin-right: 1rem;
+}
+
+.left {
+  margin-left: -1em;
+}
+
+.fix {
+  margin-right: 7rem;
+}
+
+.circle {
+  width: 8rem;
+  height: 8rem;
+  background: #ffffff;
+  border: 1px solid #000;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.image {
+  border-radius: 69%;
+  width: 8rem;
+  height: 8rem;
+}
+
+.upload {
+margin-left: 10rem;
+margin-top: 6rem;
+position: relative;
+}
+
+/* TOOK FROM LOGIN.MODULE.CSS */
+.customer {
+  width: 65%;
+  height: 36rem;
+  margin: auto;
+  padding: 6rem 0rem 0 0rem;
+  border: groove;
+  background-color: #0000000f;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
 }
 
 .black {
@@ -40,9 +79,7 @@ margin-bottom: 12px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  /* position: relative; */
-  /* display: inline-block; */
-  /* outline: none; */
+  margin-top: 1rem;
   border-radius: 2px;
 }
 
@@ -94,9 +131,9 @@ input {
 
 .control label {
   font-weight: bold;
-  flex: 1;
+  flex: 2 -1;
   color: #464646;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .control input {
@@ -105,6 +142,7 @@ input {
   padding: 0.35rem 0.35rem;
   border-radius: 4px;
   border: 1px solid #ccc;
+  margin: auto;
 }
 
 .control input:focus {
