@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  font-size: 0.875rem;
+  font-family: Titillium Web,sans-serif;
+  font-weight: 400;
+  /* line-height: 1.43; */
+  background-color: #ffffff;}
+
+.container {
+  padding: 20px 30px 0px 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1{
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+  font-size: 1.5rem;
+}
+
+.user_name {
+  color: #333;
+  margin: 30px 0px 0.67em 0px;
+  display: block;
+  font-size: 22px;
+  margin-top: 30px;
+  font-weight: 900;
+}
+
+.horizontal_line {
+  border: none;
+  height: 2px;
+  width: 12rem;
+  background: linear-gradient(to right, red, purple,white);
+}
+
+.main_div {
+  display: flex;
+  font-size: 10px;
+  margin-top: 70px;
+  font-family: Montserrat,Arial, Helvetica, sans-serif;
+}
+
+.first_div{
+  width: 12rem;
+}
+
+.social_icons {
+  position: relative;
+  display: flex;
+  padding: 0.9rem 2rem 0.5rem 0rem;
+  justify-content: space-around;
+}
+
+.label {
+  width: 100%;
+  display: inherit;
+  align-items: inherit;
+  justify-content: inherit;
+}
+
+.designation {
+  color: #333;
+  margin: 30px 0px 0.67em 0px;
+  display: block;
+  font-size: 1.5em;
+  margin-top: 15px;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.post {
+  color: #222;
+  margin: 0.83em 0px 0.83em 0px;
+  display: block;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.second_div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 24rem;
+  width: 20rem;
+  margin-left: 13rem;
+  /* top: 39rem; */
+  margin-top: -7rem;
+}
+
+/* .right {
+  top: 2rem;
+  margin-left: 76px;
+  width: 54vw;
+  height: 90vh;
+  position: absolute;
+} */
+
+.brand {
+  height: 3rem;
+  width: 10rem;
+}
+
+/* .profile_pic {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+} */
+
+.profile_crop {
+  border-radius: 50%;
+  margin: auto;
+  width: 10rem;
+  height: 10rem;
+  margin-left: 20px;
+}
+
+.posting {
+  justify-content: center;
+  display: flex;
+  align-content: center;
+  font-size: 13px;
+}

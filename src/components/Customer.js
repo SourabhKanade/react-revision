@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
 import classes from './Customer.module.css';
 
+// const initiaValue = {
+//    emailId: '',
+//    firstName: '',
+//    lastName: ''
+// }
+
 function Customer() {
+
+   const [data, setData] = useState({
+      emailId: '',
+      firstName: '',
+      lastName: ''
+   });
    const [file, setFile] = useState("");
    const [preview, setPreview] = useState("");
    const [enteredEmail, setEnteredEmail] = useState('');
@@ -36,21 +48,21 @@ function Customer() {
    const inputisvalid = enteredEmail.includes('@') && enteredFirstName.trim().length > 3 && enteredLastName.trim().length > 3 && enteredPhone.trim().length > 3 && enteredDate.trim().length > 9 && enteredPlace.trim().length > 3 && enteredCountry.trim().length > 3 && enteredState.trim().length > 3 && enteredCity.trim().length > 3;
    // const firstnameisvalid = enteredFirstName.trim().length > 0;
 
-   const fnameChangeHandler = (event) => {
-      setEnteredFirstName(event.target.value);
-      // console.log(event.target.value);
-      setFormIsValid(inputisvalid);
-   }
+   // const fnameChangeHandler = (event) => {
+   //    setEnteredFirstName(event.target.value);
+   //    // console.log(event.target.value);
+   //    setFormIsValid(inputisvalid);
+   // }
 
    const validatefnameHandler = () => {
       setFirstnameIsValid(enteredFirstName.trim().length > 3);
    }
 
-   const lnameChangeHandler = (event) => {
-      setEnteredLastName(event.target.value);
-      // console.log(event.target.value);
-      setFormIsValid(inputisvalid);
-   }
+   // const lnameChangeHandler = (event) => {
+   //    setEnteredLastName(event.target.value);
+   //    // console.log(event.target.value);
+   //    setFormIsValid(inputisvalid);
+   // }
 
    const validatelnameHandler = () => {
       setLastnameIsValid(enteredLastName.trim().length > 3);
@@ -66,11 +78,11 @@ function Customer() {
       setPhoneIsValid(enteredPhone.trim().length > 3);
    }
  
-   const emailChangeHandler = (event) => {
-     setEnteredEmail(event.target.value);
-     // console.log(event.target.value);
-     setFormIsValid(inputisvalid);
-   };
+   // const emailChangeHandler = (event) => {
+   //   setEnteredEmail(event.target.value);
+   //   // console.log(event.target.value);
+   //   setFormIsValid(inputisvalid);
+   // };
  
    const validateEmailHandler = () => {
      setEmailIsValid(enteredEmail.includes('@'));
@@ -145,10 +157,16 @@ function Customer() {
       setEnteredState('');
       setEnteredCity('');
       setEnteredEmail('');
+      // setData(initiaValue);
       console.log("customer form data saved!");
       const data = new FormData(event.target)
       console.log(Object.fromEntries(data.entries()));
     };
+
+    const handleChange_ = (e) => {
+      setData({...data, [e.target.name]: e.target.value});
+    };
+    console.log(data);
 
   return (
     <>
@@ -163,12 +181,12 @@ function Customer() {
       <div className={classes.corner} >
         <div className={`${classes.control} ${firstnameIsValid === false ? classes.invalid : '' }`} >
         <label htmlFor="fname">Firstname</label>
-          <input className={classes.left} type="text" name="FirstName" id="fname" value={enteredFirstName} onChange={fnameChangeHandler} onBlur={validatefnameHandler}/>
+          <input className={classes.left} type="text" name="firstName" id="firstName" value={data.firstName} onChange={handleChange_} onBlur={validatefnameHandler} required/>
         </div>
         
           <div className={`${classes.control} ${lastnameIsValid === false ? classes.invalid : '' }`} >
             <label className={classes.lname} htmlFor="lname">Lastname</label>
-            <input type="text" name="LastName" id="lname" value={enteredLastName} onChange={lnameChangeHandler} onBlur={validatelnameHandler}/>
+            <input type="text" name="lastName" id="firstName" value={data.lastName} onChange={handleChange_} onBlur={validatelnameHandler}/>
           </div>
        </div>
 
@@ -179,7 +197,7 @@ function Customer() {
         </div>
         <div className={`${classes.control} ${emailIsValid === false ? classes.invalid : '' }`} >
            <label className={classes.lname} htmlFor="lname" >Email</label>
-           <input type="email" name="Email" id="email" value={enteredEmail} onChange={emailChangeHandler} onBlur={validateEmailHandler}/>
+           <input type="email"  name="emailId" id="emailId" value={data.emailId} onChange={handleChange_} onBlur={validateEmailHandler}/>
         </div>
        </div>
 

@@ -1,10 +1,18 @@
-import ReCAPTCHA from 'react-google-recaptcha';
+// import ReCAPTCHA from 'react-google-recaptcha';
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import classes from './Login.module.css';
 import Button from "../ui/Button";
+import Details from './Details';
+import { useDispatch, useSelector } from 'react-redux';
+import {  getPosts } from  '../store/Main';
 
 const Login = (props) => {
+  const dispatch = useDispatch();
+  const store = useSelector((state) => state);
+  const { entities, loading } = store.postSlice;
+  console.log({store});
+
   const [enteredEmail, setEnteredEmail] = useState('');
   const [emailIsValid, setEmailIsValid] = useState();
   const [enteredPassword, setEnteredPassword] = useState('');
@@ -40,12 +48,66 @@ const Login = (props) => {
     console.log("login clicked!");
   };
 
-  function onChange(value) {
-    console.log('Captcha value:', value);
-  }
-   
+//   const taskHandler = () => {
+//     const data = {
+//       "bpp_user_alias": "ravokad214",
+//       "domain": "https://jodostaging.avhan.com:4443",
+//       "org_bpp_alias": "jodoorgcusLnPFXV7nv266XJ"
+//     }
+//     axios.post('https://jodostaging.avhan.com:4443/userBppApi/get_bpp_user', data ,{
+//       headers: {
+//         'token': 'testtoken',
+//         'content-type': 'application/json',
+//         'token_secret': 'testtokensecret',
+//       }
+//     })
+//     .then(function (response) {
+//       console.log(response);
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+// console.log("data was clicked")
+//   }
+
+
+
+
+  // const { entities, loading } = useSelector((state) => state.entities)
+  // const entities = useSelector((state) => state.entities)
+
+
+
+
+  const jodo = dispatch(getPosts());
+  // const taskHandler = (e) => {
+  //   e.preventDefault();
+  //   // dispatch(counterActions.task());
+  //   
+  // }
+
+
+
+
   return (
+    <>
+    {jodo.map((item) => {
+  return(
+    <Details key={item.id} 
+      name= {item.data.userdetails.username}
+      
+
+    />
+  );
+    })}
+    {/* <div >
+       <Button onClick={taskHandler} >Fetch Data </Button>
+    </div> */}
+    {/* <Link to="/details">
+      <Button type="submit" > User Details </Button>
+    </Link> */}
     <div className={classes.login}>
+   
       <form onSubmit={submitHandler}>
       <h1> Login </h1>
       <div className={`${classes.control} ${emailIsValid === false ? classes.invalid : '' }`} >
@@ -68,12 +130,12 @@ const Login = (props) => {
             onBlur={validatePasswordHandler}
           />
         </div>
-       <div className={classes.capcha}>
+       {/* <div className={classes.capcha}>
         <ReCAPTCHA
         sitekey="6Lcl170gAAAAAD0JYuueEd3Dty-gIXMqTMELnufP"
         onChange={onChange}
        />
-        </div>
+        </div> */}
        
         <div className={classes.actions}>
         <Link to="/customer">
@@ -82,6 +144,7 @@ const Login = (props) => {
         </div>
       </form>
     </div>
+    </>
   );
 };
 
