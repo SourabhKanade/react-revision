@@ -21,14 +21,14 @@ import axios from 'axios';
         'token_secret': 'testtokensecret',
       }
     })
-    return response.data;
-  //   .then(function (response) {
-  //     console.log(response);
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error);
-  //   });
-  // console.log("data was clicked")
+    return response
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  console.log("data was clicked")
  });
  
  

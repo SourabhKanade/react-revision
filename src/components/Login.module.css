@@ -2,7 +2,7 @@
   width: 90%;
   max-width: 35rem;
   margin: 10rem auto;
-  padding: 90px 2rem 30px 2rem;
+  padding: 30px 2rem 30px 2rem;
   border: groove;
   background-color: #0000000f;
 }
@@ -11,6 +11,13 @@
   text-align: -webkit-center;
 margin-bottom: 32px 35px 49px 21px;
 margin-bottom: 12px;
+}
+
+.style {
+  /* display: flex;
+  align-items: center; */
+  margin-top: 1rem;
+  margin-left: 2rem;
 }
 
 .black {
